@@ -13,6 +13,16 @@ print(result) # Output: 1020 (string concatenation, not addition)
 
 
 
+name = 'John Doe'
+age = 26
+
+name_and_age = name + age
+print(name_and_age) # TypeError: can only concatenate str (not "int") to str
+
+name_and_age = name + str(age)
+print(name_and_age) # John Doe26
+
+
 # augmented assignment operator ,+=. This is shorter than writing var = var + 'new text'.
 #Remember that strings are immutable, therefore this operation does not change the original string. Instead it creates a new string and reassigns it to the variable.
 greeting = 'Hello'
@@ -43,7 +53,8 @@ print(experience_info)
 name = 'John'
 print(f'Hello {name}') # Output: Hello John
 
-
+# F-strings allow you to embed expressions inside string literals, using curly braces {}. 
+# The expressions are evaluated at runtime and then formatted using the __format__ protocol.
 first_name = 'John'
 last_name = 'Doe'
 full_name = first_name + ' ' + last_name
@@ -53,6 +64,10 @@ print(employee_card)
 
 employee_age = 28
 employee_card = f'Employee: {full_name} | Age: {employee_age}'
+
+num1 = 5
+num2 = 10
+print(f'The sum of {num1} and {num2} is {num1 + num2}') # The sum of 5 and 10 is 15
 
 #extract a specific portion of a string. This is called slicing.
 #The syntax is string[start:stop], where:
